@@ -1,4 +1,4 @@
-//이더 송수신 함수
+//이더 송수신 함수 전체 설명
 
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 < 0.9.0;
