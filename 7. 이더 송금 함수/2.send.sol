@@ -44,28 +44,6 @@ contract Bank1{
         return balance[msg.sender];
     }
 
-    //받을 때
-
-    contract Bank2{
-     // 예금자주소 => 금액
-    mapping (address => uint) public balance;
-    event log(string text);
-
-    function deposit() public payable returns(uint){
-        balance[msg.sender] += msg.value;
-        return msg.value;
-    }
-
-    function getBalanceByAddr(address _addr) public view returns(uint){
-        return balance[_addr];
-    } 
-
-    receive() external payable {
-        emit log("in receive");
-    }
-    fallback() external payable {
-        emit log("in fallback");
-    }
 }
 
 
